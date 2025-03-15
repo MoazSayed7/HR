@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hr/core/helpers/extensions.dart';
-import 'package:hr/core/helpers/spacing.dart';
-import 'package:hr/core/widgets/app_text_button.dart';
 
 import '../../../core/helpers/app_regex.dart';
+import '../../../core/helpers/extensions.dart';
 import '../../../core/helpers/snack_bar.dart';
-import '../../../core/routers/routes.dart';
+import '../../../core/helpers/spacing.dart';
 import '../../../core/theme/text_styles.dart';
+import '../../../core/widgets/app_text_button.dart';
 import '../../../core/widgets/app_text_form_field.dart';
 import '../logic/cubit/sign_up_cubit.dart';
 import 'widgets/already_have_acc.dart';

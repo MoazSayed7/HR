@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:maps_launcher/maps_launcher.dart';
 
-import '../../../../core/helpers/snack_bar.dart';
 import '../../../../core/theme/colors.dart';
 import '../../../../core/theme/text_styles.dart';
 
@@ -22,14 +21,11 @@ class CustomCard extends StatelessWidget {
       final locationPart = record.split(' - ')[1];
       final lat = locationPart.split(', ')[0].replaceAll('Lat: ', '');
       final lng = locationPart.split(', ')[1].replaceAll('Lon: ', '');
-      final url = 'https://maps.google.com/?q=$lat,$lng';
-
-      if (await canLaunchUrl(Uri.parse(url))) {
-        await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
-      } else {
-        if (!context.mounted) return;
-        CustomSnackBar.showSnackBar(context, 'Could not open Google Maps');
-      }
+      MapsLauncher.launchCoordinates(
+        double.parse(lat),
+        double.parse(lng),
+        'Attendance Recorded Here',
+      );
     }
 
     return Container(

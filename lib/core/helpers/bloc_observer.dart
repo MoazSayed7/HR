@@ -1,15 +1,8 @@
 // ignore_for_file: avoid_print, depend_on_referenced_packages
 
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MyBlocObserver extends BlocObserver {
-  // @override
-  // void onEvent(Bloc bloc, Object? event) {
-  //   super.onEvent(bloc, event);
-  //   print('onEvent -- ${bloc.runtimeType}, $event');
-  // }
-
   @override
   void onChange(BlocBase bloc, Change change) {
     super.onChange(bloc, change);

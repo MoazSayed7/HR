@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "581323818157",
+    "project_id": "paymachr",
+    "storage_bucket": "paymachr.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581323818157:android:5ab067de18b964a10d3224",
+        "android_client_info": {
+          "package_name": "com.paymac.hr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrG6x_QqlNHixz9SyVP9alEFtGbQeT9NM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

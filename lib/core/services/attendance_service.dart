@@ -22,7 +22,7 @@ class AttendanceService {
       records.add(
         '$timestamp - Lat: ${position.latitude}, Lon: ${position.longitude}',
       );
-      await SharedPrefHelper.setData('attendance_$_userId', records);
+      await SharedPrefHelper.setStringList('attendance_$_userId', records);
       return timestamp;
     }
     return null;

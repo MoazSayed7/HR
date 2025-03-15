@@ -1,5 +1,7 @@
 part of 'login_cubit.dart';
 
+class ResetPasswordSent extends SigninState {}
+
 class SigninError extends SigninState {
   final String message;
 
@@ -12,8 +14,6 @@ class SigninLoading extends SigninState {}
 
 @immutable
 sealed class SigninState {}
-
-class ResetPasswordSent extends SigninState {}
 
 class UserNotVerified extends SigninState {}
 

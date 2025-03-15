@@ -12,7 +12,7 @@ class SignInFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      spacing: 10.w,
+      spacing: 8.w,
       children: [
         Text(
           'Don\'t have an account?',

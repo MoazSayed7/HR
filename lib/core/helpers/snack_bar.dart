@@ -8,7 +8,7 @@ class CustomSnackBar {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message, textAlign: TextAlign.center),
-        duration: const Duration(seconds: 6), // Adjust duration
+        duration: const Duration(seconds: 3), // Adjust duration
         behavior: SnackBarBehavior.floating,
         margin: EdgeInsets.symmetric(horizontal: 40.w, vertical: 20.h),
         shape: RoundedRectangleBorder(

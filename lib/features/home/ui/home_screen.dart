@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/theme/colors.dart';
 import '../../../core/theme/text_styles.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,9 +8,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorsManager.deepOliveBlack,
       body: Center(
-        child: Text('Home Screen', style: TextStyles.font17WhiteSemiBold),
+        child: Text('Home Screen', style: TextStyles.font12DarkBlueRegular),
       ),
     );
   }

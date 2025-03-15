@@ -59,10 +59,9 @@ class SignInScreen extends StatelessWidget {
         predicate: (route) => false,
       );
     } else if (state is UserNotVerified) {
-      context.pop();
       CustomSnackBar.showSnackBar(
         context,
-        'Please check your email and verify your email.',
+        'Please check your mail and verify your email.',
       );
     }
   }

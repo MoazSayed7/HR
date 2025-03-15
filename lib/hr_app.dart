@@ -23,10 +23,17 @@ class HRApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
             useMaterial3: true,
+            scaffoldBackgroundColor: Colors.white,
+            textSelectionTheme: const TextSelectionThemeData(
+              cursorColor: ColorsManager.mainBlue,
+              selectionColor: Color.fromARGB(188, 36, 124, 255),
+              selectionHandleColor: ColorsManager.mainBlue,
+            ),
             progressIndicatorTheme: ProgressIndicatorThemeData(
               color: ColorsManager.mainBlue,
             ),
           ),
+          themeMode: ThemeMode.light,
           initialRoute: initialRoute,
           onGenerateRoute: appRouter.generateRoute,
         );

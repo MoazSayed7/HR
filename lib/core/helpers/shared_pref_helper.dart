@@ -39,6 +39,13 @@ class SharedPrefHelper {
     return sharedPreferences.getString(key) ?? '';
   }
 
+  /// Gets an String List values from SharedPreferences with given [key].
+  static Future<List<String>> getStringList(String key) async {
+    debugPrint('SharedPrefHelper : getStringList with key : $key');
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    return sharedPreferences.getStringList(key) ?? [];
+  }
+
   /// Removes a value from SharedPreferences with given [key].
   static removeData(String key) async {
     debugPrint('SharedPrefHelper : data with key : $key has been removed');
@@ -59,6 +66,9 @@ class SharedPrefHelper {
         break;
       case bool:
         await sharedPreferences.setBool(key, value);
+        break;
+      case const (List<String>):
+        await sharedPreferences.setStringList(key, value);
         break;
       case double:
         await sharedPreferences.setDouble(key, value);

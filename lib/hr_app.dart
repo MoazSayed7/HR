@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/routers/app_router.dart';
-import 'core/routers/routes.dart';
+import 'core/theme/colors.dart';
+import 'main.dart';
 
 class HRApp extends StatelessWidget {
   final AppRouter appRouter;
@@ -19,9 +20,14 @@ class HRApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'HR App',
-          theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: true),
-          themeMode: ThemeMode.dark,
-          initialRoute: Routes.homeScreen,
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            useMaterial3: true,
+            progressIndicatorTheme: ProgressIndicatorThemeData(
+              color: ColorsManager.mainBlue,
+            ),
+          ),
+          initialRoute: initialRoute,
           onGenerateRoute: appRouter.generateRoute,
         );
       },
